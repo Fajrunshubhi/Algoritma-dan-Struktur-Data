@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="fajru"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-03-22 12:04:09 PM"/>
+        <attribute name="created" value="ZmFqcnU7REVTS1RPUC01U0JVR1NTOzIwMjEtMDMtMjI7MTA6NTU6NDMgQU07MjkwMg=="/>
+        <attribute name="edited" value="ZmFqcnU7REVTS1RPUC01U0JVR1NTOzIwMjEtMDMtMjI7MTI6MDQ6MDkgUE07MTE7MzA3Mg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="bilangan" type="Integer" array="False" size=""/>
+            <input variable="bilangan"/>
+            <call expression="F(bilangan)"/>
+            <output expression="F(bilangan)" newline="True"/>
+        </body>
+    </function>
+    <function name="F" type="String" variable="hasil">
+        <parameters>
+            <parameter name="angka" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="hasil" type="String" array="False" size=""/>
+            <if expression="angka &gt; 0 &amp;&amp; angka&lt;10">
+                <then>
+                    <assign variable="hasil" expression="&quot;satuan&quot;"/>
+                </then>
+                <else>
+                    <if expression="angka &gt; 10 &amp;&amp; angka&lt;100">
+                        <then>
+                            <assign variable="hasil" expression="&quot;puluhan&quot;"/>
+                        </then>
+                        <else>
+                            <if expression="angka &gt; 99 &amp;&amp; angka &lt; 1000">
+                                <then>
+                                    <assign variable="hasil" expression="&quot;ratusan&quot;"/>
+                                </then>
+                                <else>
+                                    <if expression="angka &gt;= 1000">
+                                        <then>
+                                            <assign variable="hasil" expression="&quot;ribuan&quot;"/>
+                                        </then>
+                                        <else/>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

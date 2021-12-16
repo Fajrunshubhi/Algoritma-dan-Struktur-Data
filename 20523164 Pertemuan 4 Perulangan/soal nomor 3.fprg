@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="fajru"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-03-18 01:19:47 PM"/>
+        <attribute name="created" value="ZmFqcnU7REVTS1RPUC01U0JVR1NTOzIwMjEtMDMtMTg7MDE6MTQ6MjkgUE07MjkyMQ=="/>
+        <attribute name="edited" value="ZmFqcnU7REVTS1RPUC01U0JVR1NTOzIwMjEtMDMtMTg7MDE6MTk6NDcgUE07MTszMDM0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="bilangan" type="Real" array="False" size=""/>
+            <input variable="bilangan"/>
+            <while expression="(bilangan &gt; 1.0) || (bilangan &lt; 0.5)">
+                <output expression="&quot;Masukkan salah,input angka antara 0.5 dan 1.0&quot;" newline="True"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="fajru"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-03-04 02:31:33 PM"/>
+        <attribute name="created" value="ZmFqcnU7REVTS1RPUC01U0JVR1NTOzIwMjEtMDMtMDQ7MDI6MjA6MjggUE07MjkxMw=="/>
+        <attribute name="edited" value="ZmFqcnU7REVTS1RPUC01U0JVR1NTOzIwMjEtMDMtMDQ7MDI6MzE6MzMgUE07MTszMDE5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Nama" type="String" array="False" size=""/>
+            <input variable="Nama"/>
+            <output expression="&quot;Nama yang baru saja dimasukkan adalah: &quot;" newline="False"/>
+            <output expression="Nama" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

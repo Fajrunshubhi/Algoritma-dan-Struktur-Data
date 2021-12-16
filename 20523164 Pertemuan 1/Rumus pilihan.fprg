@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="fajru"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-03-04 02:45:58 PM"/>
+        <attribute name="created" value="ZmFqcnU7REVTS1RPUC01U0JVR1NTOzIwMjEtMDMtMDQ7MDI6MzI6NTAgUE07MjkxMQ=="/>
+        <attribute name="edited" value="ZmFqcnU7REVTS1RPUC01U0JVR1NTOzIwMjEtMDMtMDQ7MDI6NDU6NTggUE07MjszMDMy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="PanjangSisiKubus" type="Integer" array="False" size=""/>
+            <input variable="PanjangSisiKubus"/>
+            <declare name="RumusLuasPermukaanKubus" type="Integer" array="False" size=""/>
+            <assign variable="RumusLuasPermukaanKubus" expression="6 * PanjangSisiKubus * PanjangSisiKubus"/>
+            <output expression="&quot;Luas permukaan kubus adalah: &quot;" newline="False"/>
+            <output expression="RumusLuasPermukaanKubus" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

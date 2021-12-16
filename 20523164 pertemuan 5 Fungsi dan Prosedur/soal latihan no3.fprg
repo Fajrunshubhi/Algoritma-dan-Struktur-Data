@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="fajru"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-03-22 12:14:50 PM"/>
+        <attribute name="created" value="ZmFqcnU7REVTS1RPUC01U0JVR1NTOzIwMjEtMDMtMjI7MTI6MTA6MTggUE07MjkxMg=="/>
+        <attribute name="edited" value="ZmFqcnU7REVTS1RPUC01U0JVR1NTOzIwMjEtMDMtMjI7MTI6MTQ6NTAgUE07NjszMDI1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="masukan" type="String" array="False" size=""/>
+            <input variable="masukan"/>
+            <call expression="tanda(masukan)"/>
+        </body>
+    </function>
+    <function name="tanda" type="String" variable="hasil">
+        <parameters>
+            <parameter name="masukan" type="String" array="False"/>
+        </parameters>
+        <body>
+            <declare name="hasil" type="String" array="False" size=""/>
+            <assign variable="hasil" expression="&quot;&quot;"/>
+            <declare name="x" type="Integer" array="False" size=""/>
+            <for variable="x" start="1" end="len(masukan)" direction="inc" step="1">
+                <assign variable="hasil" expression="hasil &amp; &quot;*&quot;"/>
+            </for>
+            <output expression="masukan &amp; ToChar(10) &amp; hasil" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

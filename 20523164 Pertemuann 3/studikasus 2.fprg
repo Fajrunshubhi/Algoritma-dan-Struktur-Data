@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="fajru"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-03-23 07:45:57 AM"/>
+        <attribute name="created" value="ZmFqcnU7REVTS1RPUC01U0JVR1NTOzIwMjEtMDMtMjI7MTE6MTE6MzAgUE07MjkwNg=="/>
+        <attribute name="edited" value="ZmFqcnU7REVTS1RPUC01U0JVR1NTOzIwMjEtMDMtMjM7MDc6NDU6NTcgQU07NDA7MzA3Mg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="totalBelanja, bayar, kembalian, i" type="Integer" array="False" size=""/>
+            <output expression="&quot;Masukkan total belanja: Rp &quot;" newline="False"/>
+            <input variable="totalBelanja"/>
+            <output expression="&quot;Masukkan uang yang dibayarkan: Rp &quot;" newline="True"/>
+            <input variable="bayar"/>
+            <if expression="totalBelanja % 500 == 0">
+                <then>
+                    <if expression="bayar &lt; totalBelanja">
+                        <then>
+                            <output expression="&quot;Error: Uang yang dibayarkan kurang&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="bayar == totalBelanja">
+                                <then>
+                                    <output expression="&quot;Uang pas, tidak ada uang kembalian. Terimakasih&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="bayar &gt; totalBelanja">
+                                        <then>
+                                            <assign variable="kembalian" expression="bayar - totalBelanja"/>
+                                            <output expression="&quot;Uang kembalian adalah: &quot; &amp; kembalian" newline="True"/>
+                                            <output expression="&quot;yang meliputi pecahan: &quot;" newline="True"/>
+                                            <assign variable="i" expression="1"/>
+                                            <while expression="kembalian &gt;= 20000">
+                                                <assign variable="kembalian" expression="kembalian - 20000"/>
+                                                <if expression="kembalian &lt; 20000">
+                                                    <then>
+                                                        <output expression="i &amp; &quot; lembar 20.000&quot;" newline="True"/>
+                                                    </then>
+                                                    <else/>
+                                                </if>
+                                                <assign variable="i" expression="i + 1"/>
+                                            </while>
+                                            <assign variable="i" expression="1"/>
+                                            <while expression="kembalian &gt;= 10000">
+                                                <assign variable="kembalian" expression="kembalian - 10000"/>
+                                                <if expression="kembalian &lt; 10000">
+                                                    <then>
+                                                        <output expression="i &amp; &quot; lembar 10.000&quot;" newline="True"/>
+                                                    </then>
+                                                    <else/>
+                                                </if>
+                                                <assign variable="i" expression="i + 1"/>
+                                            </while>
+                                            <assign variable="i" expression="1"/>
+                                            <while expression="kembalian &gt;= 5000">
+                                                <assign variable="kembalian" expression="kembalian - 5000"/>
+                                                <if expression="kembalian &lt; 5000">
+                                                    <then>
+                                                        <output expression="i &amp; &quot; lembar 5.000&quot;" newline="True"/>
+                                                    </then>
+                                                    <else/>
+                                                </if>
+                                                <assign variable="i" expression="i + 1"/>
+                                            </while>
+                                            <assign variable="i" expression="1"/>
+                                            <while expression="kembalian &gt;= 1000">
+                                                <assign variable="kembalian" expression="kembalian - 1000"/>
+                                                <if expression="kembalian &lt; 1000">
+                                                    <then>
+                                                        <output expression="i &amp; &quot; lembar 1.000&quot;" newline="True"/>
+                                                    </then>
+                                                    <else/>
+                                                </if>
+                                                <assign variable="i" expression="i + 1"/>
+                                            </while>
+                                            <assign variable="i" expression="1"/>
+                                            <while expression="kembalian &gt;= 500">
+                                                <assign variable="kembalian" expression="kembalian - 500"/>
+                                                <if expression="kembalian &lt; 500">
+                                                    <then>
+                                                        <output expression="i &amp; &quot; keping 500&quot;" newline="True"/>
+                                                    </then>
+                                                    <else/>
+                                                </if>
+                                                <assign variable="i" expression="i + 1"/>
+                                            </while>
+                                        </then>
+                                        <else/>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <output expression="&quot;Erro: Total pembayaran belanja harus kelipatan 500&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="fajru"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-03-24 09:49:20 PM"/>
+        <attribute name="created" value="ZmFqcnU7REVTS1RPUC01U0JVR1NTOzIwMjEtMDMtMjM7MDc6NDY6MDEgQU07MjkwMw=="/>
+        <attribute name="edited" value="ZmFqcnU7REVTS1RPUC01U0JVR1NTOzIwMjEtMDMtMjQ7MDk6NDk6MjAgUE07MTQ7MzA4NQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="kata, singkat, masukan, kalimat" type="String" array="False" size=""/>
+            <declare name="hurufAwal" type="Boolean" array="False" size=""/>
+            <assign variable="hurufAwal" expression="true"/>
+            <assign variable="singkat" expression="&quot;&quot;"/>
+            <assign variable="masukan" expression="&quot;&quot;"/>
+            <assign variable="kata" expression="&quot;&quot;"/>
+            <output expression="&quot;masukan kalimat yang ingin disingkat&quot;" newline="True"/>
+            <input variable="kalimat"/>
+            <output expression="&quot;Ejakan kalimat diatas dalam bentuk huruf per huruf&quot;" newline="True"/>
+            <output expression="&quot;Masukan huruf&quot;" newline="True"/>
+            <output expression="&quot;jika sudah dieja, akhiri dengan menginput: . &quot;" newline="True"/>
+            <do expression="masukan != &quot;.&quot;">
+                <input variable="masukan"/>
+                <assign variable="kata" expression="kata &amp; masukan"/>
+                <if expression="hurufAwal &amp;&amp; masukan != &quot; &quot;">
+                    <then>
+                        <assign variable="singkat" expression="singkat &amp; masukan"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="masukan == &quot; &quot;">
+                    <then>
+                        <assign variable="hurufAwal" expression="true"/>
+                    </then>
+                    <else>
+                        <assign variable="hurufAwal" expression="false"/>
+                    </else>
+                </if>
+            </do>
+            <output expression="&quot;Singkatan dari kalimat &quot; &amp; kata &amp; &quot; adalah: &quot; &amp; singkat" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

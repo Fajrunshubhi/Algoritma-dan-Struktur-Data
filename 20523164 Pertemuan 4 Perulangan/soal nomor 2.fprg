@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="fajru"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-03-18 02:31:02 PM"/>
+        <attribute name="created" value="ZmFqcnU7REVTS1RPUC01U0JVR1NTOzIwMjEtMDMtMTg7MDE6MDI6MjQgUE07MjkxMw=="/>
+        <attribute name="edited" value="ZmFqcnU7REVTS1RPUC01U0JVR1NTOzIwMjEtMDMtMTg7MDI6MzE6MDIgUE07NzszMDI2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="awal" type="Integer" array="False" size=""/>
+            <declare name="akhir" type="Integer" array="False" size=""/>
+            <declare name="jumlah" type="Integer" array="False" size=""/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <output expression="&quot;Masukkan nilai awal: &quot;" newline="False"/>
+            <input variable="awal"/>
+            <output expression="&quot;Masukkan nilai akhir: &quot;" newline="False"/>
+            <input variable="akhir"/>
+            <assign variable="jumlah" expression="0"/>
+            <for variable="i" start="awal" end="akhir" direction="inc" step="1">
+                <if expression="i % 2 == 1">
+                    <then>
+                        <assign variable="jumlah" expression="jumlah + i"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="&quot;jumlah bilangan ganjil antara &quot; &amp; awal &amp; &quot; dan &quot; &amp; akhir &amp; &quot; adalah: &quot;" newline="True"/>
+            <output expression="jumlah" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

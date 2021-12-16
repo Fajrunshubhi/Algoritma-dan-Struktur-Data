@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="fajru"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-03-18 02:30:28 PM"/>
+        <attribute name="created" value="ZmFqcnU7REVTS1RPUC01U0JVR1NTOzIwMjEtMDMtMTg7MTI6Mzk6MzIgUE07MjkyNA=="/>
+        <attribute name="edited" value="ZmFqcnU7REVTS1RPUC01U0JVR1NTOzIwMjEtMDMtMTg7MDI6MzA6MjggUE07NTszMDMx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="nilai" type="Integer" array="False" size=""/>
+            <declare name="jumlah" type="Integer" array="False" size=""/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <assign variable="jumlah" expression="0"/>
+            <output expression="&quot;masukan batas angka lebih dari 1 yang nantinya akan dihitung ada berapa jumlah angka ganjil pada rentang tersebut (n)&quot;" newline="False"/>
+            <input variable="nilai"/>
+            <for variable="i" start="1" end="nilai" direction="inc" step="1">
+                <if expression="i % 2 == 1">
+                    <then>
+                        <assign variable="jumlah" expression="jumlah + i"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="&quot;jumlah bilangan ganjil dari 1 sampai dengan n adalah: &quot;" newline="False"/>
+            <output expression="jumlah" newline="False"/>
+        </body>
+    </function>
+</flowgorithm>

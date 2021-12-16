@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="jogyes"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-06-21 12:05:08 PM"/>
+        <attribute name="created" value="am9neWVzO0RFU0tUT1AtODFLUzFQTTsyMDIxLTA2LTE3OzAxOjUyOjM5IFBNOzI5OTI="/>
+        <attribute name="edited" value="am9neWVzO0RFU0tUT1AtODFLUzFQTTsyMDIxLTA2LTE3OzAyOjIyOjAxIFBNOzE7MzA4Nw=="/>
+        <attribute name="edited" value="TGVub3ZvO0xBUFRPUC04NU5CMjMyTDsyMDIxLTA2LTIxOzEyOjA1OjIzIFBNOzI7Mjk5Ng=="/>
+        <attribute name="edited" value="ZmFqcnU7REVTS1RPUC01U0JVR1NTOzIwMjEtMDYtMjE7MTI6MDU6MDggUE07MTQ7MzA3Nw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="array" type="Integer" array="True" size="6"/>
+            <declare name="a, b, c, p" type="Integer" array="False" size=""/>
+            <for variable="a" start="0" end="Size(array)-1" direction="inc" step="1">
+                <output expression="&quot;Masukkan Angka: &quot;" newline="True"/>
+                <input variable="array[a]"/>
+            </for>
+            <output expression="&quot;Array Awal =[&quot;" newline="False"/>
+            <for variable="a" start="0" end="4" direction="inc" step="1">
+                <output expression="array[a] &amp; &quot;, &quot;" newline="False"/>
+            </for>
+            <output expression="array[5] &amp; &quot;]&quot;" newline="True"/>
+            <for variable="b" start="0" end="4" direction="inc" step="1">
+                <for variable="c" start="b+1" end="5" direction="inc" step="1">
+                    <if expression="array[b] &gt; array[c]">
+                        <then>
+                            <assign variable="p" expression="array[b]"/>
+                            <assign variable="array[b]" expression="array[c]"/>
+                            <assign variable="array[c]" expression="p"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+            </for>
+            <output expression="&quot;Array Setelah Diurutkan = [&quot;" newline="False"/>
+            <for variable="a" start="0" end="4" direction="inc" step="1">
+                <output expression="array[a] &amp; &quot;, &quot;" newline="False"/>
+            </for>
+            <output expression="array[5] &amp; &quot;]&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
